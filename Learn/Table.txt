@@ -1,37 +1,39 @@
 Explain Table.JS
 
 Component Overview
-    Defines a sophisticated data table component for the Open Greek Financial LLM Leaderboard. It's built with React and Material UI, providing an interactive and performant way to display model comparison data.
+    Defines a sophisticated data table component for the Open Greek Financial LLM Leaderboard. 
+    It's built with React and Material UI, providing an interactive and performant way to display model comparison data.
 
 Main Components
     1. LeaderboardTable (Default Export)
-    The primary component that renders the entire table with:
+        The primary component that renders the entire table with:
 
-    Virtualized row rendering for performance
-    Sorting capabilities
-    Sticky headers and pinned rows
-    Custom styling based on themes
-    Responsive design
+        1. Virtualized row rendering for performance
+        2. Sorting capabilities
+        3. Sticky headers and pinned rows
+        4. Custom styling based on themes
+        5. Responsive design
 
     2. TableSkeleton (Named Export)
-    Displays loading placeholders when data is being fetched, creating a visual outline of the table.
+        Displays loading placeholders when data is being fetched, creating a visual outline of the table.
 
     3. Supporting Components
-    TableControls: Manages display options like row size, score format, etc.
-    NoResultsFound: Shows when filters return no matching models
+        A. TableControls: Manages display options like row size, score format, etc.
+        B. NoResultsFound: Shows when filters return no matching models
 
     Key Features: 
-        Virtualized Rendering: Only renders visible rows using @tanstack/react-virtual
-        Pinned Models: Keeps selected models at the top when scrolling
-        Dynamic Sorting: Allows sorting by clicking column headers
+        1. Virtualized Rendering: Only renders visible rows using @tanstack/react-virtual
+        2. Pinned Models: Keeps selected models at the top when scrolling
+        3. Dynamic Sorting: Allows sorting by clicking column headers
         Row Size Control: Adjusts row density based on user preference
-        Column Management: Shows/hides columns through ColumnSelector
-        Loading States: Shows skeleton UI during data loading
-        Empty States: Displays friendly message when no results found
-        Technical Highlights
-        Implements optimized rendering with React hooks (useMemo, useCallback)
-        Uses MUI theming for consistent styling
-        Handles advanced table behaviors like sticky headers and conditional styling
-        Supports accessibility through proper semantics
-        Implements custom scrollbars with theme-aware styling
-        The table component serves as the central UI element of the leaderboard, allowing users to effectively compare and analyze model performance.
+        4. Column Management: Shows/hides columns through ColumnSelector
+        5. Loading States: Shows skeleton UI during data loading
+        6. Empty States: Displays friendly message when no results found
+    
+    Technical Highlights
+        1. Implements optimized rendering with React hooks (useMemo, useCallback)
+        2. Uses MUI theming for consistent styling
+        3. Handles advanced table behaviors like sticky headers and conditional styling
+        4. Supports accessibility through proper semantics
+        5. Implements custom scrollbars with theme-aware styling
+        
