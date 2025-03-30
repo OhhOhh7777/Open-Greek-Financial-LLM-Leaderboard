@@ -1,0 +1,40 @@
+Explain ColumnSelector.js
+
+
+Component Overview:
+The ColumnSelector component provides an interactive interface for users to customize which columns are displayed in the leaderboard table. 
+It allows toggling visibility of various table columns organized into logical groups.
+
+
+Features:
+    - Column Visibility Management: Toggle visibility of table columns
+    - Grouped Organization: Columns are categorized into logical groups (e.g., "Evaluation Scores")
+    - Column Counts: Shows how many columns are visible out of total available columns per group
+    - Reset Capability: Easily restore default column configuration
+    - Fixed Columns: Some essential columns cannot be toggled off
+    - Visual Feedback: Shows when custom column settings are in use
+
+
+Props:
+
+    Name                        Type        Description
+    --------------------------+-------------------------------------------------------------------------------
+    table                     + Object      Table instance from TanStack Table with column visibility state
+    onReset                   + Function    Callback when reset is triggered
+    hasChange                 + Boolean     Indicates if current column settings differ from defaults
+    onColumnVisibilityChange  + Function    Callback when column visibility changes
+    loading                   + Boolean     Disables interactions during loading state
+
+
+Component Structure:
+    FilterGroup (Internal Component) :
+        Renders a group of toggleable column options with:
+            - Group title
+            - Optional count of selected items (e.g., "3/5")
+            - List of selectable column options
+
+    ColumnSelector (Main Component) :
+            - Renders a dropdown button with column selection UI
+            - Manages column visibility state
+            - Provides reset functionality
+            - Organizes columns into logical groups
