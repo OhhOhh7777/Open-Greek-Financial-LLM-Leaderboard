@@ -1,0 +1,62 @@
+Explain TableOptions in DisplayOPtions.js
+
+
+Overview:
+TableOptions is a dropdown menu component that provides user controls for customizing the display and behavior of the leaderboard table. 
+It allows users to adjust table density, score formats, ranking methods, and calculation preferences.
+
+
+Features:
+    - Table Appearance Settings: Controls row size/density
+    - Score Display Format: Toggle between normalized and raw scores
+    - Ranking Configuration: Choose between static or dynamic ranking methods
+    - Average Calculation: Control which scores are included in averages
+    - URL Parameter Integration: Settings are persisted in URL for sharing
+    - Reset Capability: One-click restoration of default settings
+    - Contextual Help: Information tooltips for each option
+
+
+Props:
+
+Prop Name               Type                Default         Description
+-----------------------------------------------------------------
+rowSize                 String                              Current row size/density setting
+onRowSizeChange         Function                            Handler for row size changes
+scoreDisplay	        String              "normalized"	Current score display format
+onScoreDisplayChange	Function                            Handler for score display changes
+averageMode	            String              "all"           Current average calculation mode
+onAverageModeChange	    Function                            Handler for average mode changes
+rankingMode	            String              "static"	    Current ranking method
+onRankingModeChange	    Function                            Handler for ranking mode changes
+hasChanges	            Boolean                             Whether current settings differ from defaults
+searchParams	        URLSearchParams                     URL search parameters object
+setSearchParams	        Function                            Function to update URL parameters
+loading	                Boolean                             Whether the table is in loading state
+
+
+
+Available Options
+    Row Size:
+    Controls the vertical density of table rows:
+        - Compact
+        - Normal
+        - Relaxed
+    
+    Score Display:
+    Determines how scores are presented:
+        - Normalized (0-100 scale)
+        - Raw (original score format)
+
+    Ranking Mode:
+    Controls how model rankings are calculated:
+        - Static (fixed ranking based on overall performance)
+        - Dynamic (ranking that adjusts based on visible columns)
+
+    Average Mode:
+    Determines which scores contribute to average calculations:
+        - All Scores (includes all metrics regardless of visibility)
+        - Visible Only (includes only metrics currently displayed)
+
+    URL Parameter Integration:
+    Settings are stored in the URL as search parameters, making configurations shareable via links. 
+    The component reads from and updates these parameters when settings change.
