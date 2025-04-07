@@ -1,0 +1,66 @@
+# FilteredModelCount Component Documentation
+
+## Overview
+The FilteredModelCount component displays a fraction showing how many models in the leaderboard
+match the current filters (numerator) out of total available models (denominator). It also
+handles special cases like pinned models and official provider filtering.
+
+## Component Location
+/Users/davidchiang/Documents/Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/FilteredModelCount.js
+
+## Props
+- totalCount (Number): Total number of models in the dataset
+- filteredCount (Number): Number of models that match current filters
+- hasFilterChanges (Boolean): Whether any filters are currently active
+- loading (Boolean): Whether data is currently loading
+- data (Array): Array of model data objects
+- table (Object): Reference to the table instance
+
+## Display Format
+Displays in format: "X+Y/Z" where:
+- X: Number of regular (non-pinned) models matching filters
+- Y: Number of pinned models (only shown when pins exist)
+- Z: Total model count (or only official models when filtered)
+
+## Features
+- Highlights counts when filters are active
+- Shows pinned models count separately with "+" indicator
+- Displays loading skeletons during data fetching
+- Visually differentiates official provider models
+- Adjusts total count when official provider filter is active
+- Calculates which pinned models would pass filters if not pinned
+
+## Internal Components
+
+### CountTypography
+A presentational component that shows numeric values with appropriate styling:
+- Handles loading state with skeleton placeholders
+- Displays optional pinned count indicator
+- Applies color based on filter state
+
+### useModelCount (Custom Hook)
+Calculates various model counts based on current filters:
+
+Returns:
+- displayCount: Total models to display (all or official only)
+- currentFilteredCount: Number of models after filtering
+- totalPinnedCount: Total number of pinned models
+- filteredPinnedCount: Number of pinned models matching filters
+- isOfficialProviderActive: Whether official provider filter is active
+
+## Special Behaviors
+- When filters are active, filtered count is highlighted in primary color
+- When official provider filter is active, total count shows in secondary color
+- Pinned models are counted separately from regular filtered models
+- Detailed logic determines which pinned models would match filters
+
+## Usage Example
+```jsx
+<FilteredModelCount
+  totalCount={models.length}
+  filteredCount={filteredModels.length}
+  hasFilterChanges={areFiltersActive}
+  loading={isLoading}
+  data={models}
+  table={tableInstance}
+/>

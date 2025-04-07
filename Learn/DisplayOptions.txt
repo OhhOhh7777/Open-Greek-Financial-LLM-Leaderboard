@@ -1,4 +1,4 @@
-Explain TableOptions in DisplayOPtions.js
+Explain TableOptions in DisplayOptions.js
 
 
 Overview:
