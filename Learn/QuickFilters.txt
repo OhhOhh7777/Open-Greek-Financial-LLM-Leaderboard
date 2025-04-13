@@ -1,0 +1,68 @@
+# QuickFilters Component Documentation
+
+## Overview
+The QuickFilters component provides preset filtering options to quickly filter language models 
+by parameter size ranges and provider type. It offers a convenient interface for common filtering
+scenarios, displaying counts of matching models for each filter option.
+
+## Component Location
+/Users/davidchiang/Documents/Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/QuickFilters.js
+
+## Props
+- totalCount (Number): Total number of models in the dataset
+- loading (Boolean): Whether data is currently loading
+
+## Key Features
+- One-click parameter size filtering with predefined ranges
+- Official providers toggle with visual distinction
+- Real-time model counts for each filter option
+- Responsive layout adapting to different screen sizes
+- Visual feedback showing which filters are active
+- Integration with URL parameters for sharable filter states
+- Loading skeleton placeholder during data fetching
+
+## Internal Components
+
+### QuickFiltersTitle
+A simple header component that displays the section title with an information tooltip:
+- Renders "Quick Filters" text
+- Includes InfoIconWithTooltip for additional help information
+- Accepts custom styling via sx prop
+
+### QuickFiltersSkeleton
+A placeholder component shown during loading states:
+- Mimics the layout of the actual component
+- Displays animated skeleton elements in place of filter options
+- Maintains consistent layout to prevent layout shifts
+
+## Component Structure
+- Main container with responsive styling
+- Title section with help tooltip
+- Filter options section with model size presets
+- Special "Official Providers" filter with checkbox toggle
+- Each filter displays the count of matching models
+
+## Filter Types
+
+### Parameter Size Filters
+- Small models (<7B parameters)
+- Medium models (7-13B parameters)
+- Large models (13-70B parameters)
+- Huge models (>70B parameters)
+
+### Special Filters
+- Official Providers: Shows only models maintained by their original creators
+
+## Internal Logic
+- Uses LeaderboardContext to access and update global filter state
+- Calculates model counts for each filter option based on current dataset
+- Detects active filters by comparing current parameter ranges
+- Updates URL parameters when filters change for shareable states
+- Handles toggling filters on/off with appropriate reset behavior
+
+## Usage Example
+```jsx
+<QuickFilters
+  totalCount={models.length}
+  loading={isLoading}
+/>
