@@ -6,7 +6,7 @@ by parameter size ranges and provider type. It offers a convenient interface for
 scenarios, displaying counts of matching models for each filter option.
 
 ## Component Location
-/Users/davidchiang/Documents/Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/QuickFilters.js
+Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/QuickFilters.js
 
 ## Props
 - totalCount (Number): Total number of models in the dataset

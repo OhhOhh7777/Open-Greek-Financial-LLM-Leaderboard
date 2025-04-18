@@ -4,7 +4,7 @@
 The LeaderboardFilters component provides an expandable interface with advanced filtering controls for the Open Greek Financial LLM Leaderboard. It allows users to filter models by precision, parameter count, model type, and various feature flags.
 
 ## Component Location
-/Users/davidchiang/Documents/Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/Filters.js
+Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/Filters.js
 
 ## Main Features
 - Precision format filtering (FP16, BF16, etc.)

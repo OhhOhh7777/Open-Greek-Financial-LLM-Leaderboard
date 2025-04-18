@@ -6,7 +6,7 @@ Leaderboard, allowing users to filter models by name and attributes. It includes
 syntax, visual feedback for active filters, and integration with the leaderboard's filtering system.
 
 ## Component Location
-/Users/davidchiang/Documents/Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/SearchBar.js
+Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/SearchBar.js
 
 ## Props
 - onToggleFilters (Function): Toggles visibility of advanced filters panel

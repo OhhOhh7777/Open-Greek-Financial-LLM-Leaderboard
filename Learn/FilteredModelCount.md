@@ -6,7 +6,7 @@ match the current filters (numerator) out of total available models (denominator
 handles special cases like pinned models and official provider filtering.
 
 ## Component Location
-/Users/davidchiang/Documents/Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/FilteredModelCount.js
+Open-Greek-Financial-LLM-Leaderboard/frontend/src/pages/LeaderboardPage/components/Leaderboard/components/Filters/FilteredModelCount.js
 
 ## Props
 - totalCount (Number): Total number of models in the dataset
